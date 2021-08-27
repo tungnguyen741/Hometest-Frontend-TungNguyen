@@ -1,0 +1,129 @@
+.bookItemWrapper {
+  background: $bg-yellow;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 8px;
+}
+.bookItem {
+  max-width: 160px;
+  min-height: 300px;
+  width: 100%;
+  position: relative;
+  background: #fff;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  display: block;
+
+  animation: fadeInRight 0.5s linear;
+  .bookInfoWrapper {
+    padding-left: 8px;
+  }
+
+  &:hover {
+    opacity: 0.85;
+  }
+  &__name {
+    font-size: 12px;
+  }
+  &__logoTikiNow {
+    margin: 4px 0;
+  }
+
+  &__reviewWrapper {
+    margin: 2px 0 8px 0;
+  }
+
+  &__thumb {
+    position: relative;
+    width: 100%;
+    border-radius: 4px;
+    min-height: 160px;
+    min-width: 160px;
+  }
+  &__thumbWrapper {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-radius: 4px;
+  }
+  &__reviewWrapper {
+    &--star {
+      img {
+        margin-right: 2.32px;
+      }
+      img:last-child {
+        margin-right: 0;
+      }
+    }
+    &--reviewCount {
+      font-size: 10px;
+      color: #808089;
+      margin-top: 4px;
+    }
+  }
+  &__priceWrapper {
+    &--price {
+      font-weight: 500;
+      font-size: 14px;
+    }
+    &--discountRate {
+      width: 40px;
+      background: #ff424f;
+      color: #fff;
+      padding: 4px;
+      border-radius: 4px;
+      font-weight: bold;
+      margin-left: 8px;
+      font-size: 12px;
+    }
+  }
+  &__listPrice {
+    color: #808089;
+    text-decoration: line-through;
+    font-size: 12px;
+  }
+}
+.superSale-slider-wrapper {
+  .bookItem {
+    max-width: initial !important;
+    min-height: inherit !important;
+    padding: 8px;
+    .bookInfoWrapper {
+      padding-left: 16px;
+    }
+    &__thumbWrapper {
+      max-width: 160px;
+      top: 8px;
+      left: 8px;
+    }
+    &__reviewWrapper--star {
+      img {
+        display: inline-block;
+      }
+    }
+  }
+  .bookItemTop {
+    max-width: 160px;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOutLeft {
+  0% {
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

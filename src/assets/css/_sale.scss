@@ -1,0 +1,54 @@
+.banners {
+  &-slider-wrapper {
+    cursor: pointer;
+    min-height: 120px;
+    img {
+      width: 100%;
+    }
+  }
+  &__saleImg {
+    width: 100%;
+    // max-height: 34px;
+    padding: 16px 0;
+    background: $bg-yellow;
+  }
+}
+.SuperSale {
+  padding: 0 16px 24px 16px;
+  background: #f7c65a;
+  &__title {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 0;
+  }
+}
+
+.FlashSale {
+  background: $bg-yellow;
+  & > img {
+    padding-top: 13px;
+    width: 100%;
+  }
+  &__wrapper {
+    display: flex;
+    font-size: 14px;
+    margin-top: 16px;
+    &--saleTimeline {
+      cursor: pointer;
+      width: 25%;
+      text-align: center;
+      color: #808089;
+      padding: 8px;
+    }
+    &--saleTimeline.active {
+      color: #fc820a;
+      border-bottom: 1.5px solid #fc820a;
+      font-weight: 700;
+    }
+  }
+  .bookItemWrapper {
+    margin-top: 20px;
+  }
+}

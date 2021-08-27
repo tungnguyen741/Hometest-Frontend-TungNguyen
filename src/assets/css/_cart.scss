@@ -1,0 +1,166 @@
+//
+.Cart {
+  background: #f5f5fa;
+  &__title {
+    color: #27272a;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 16px;
+  }
+  &__orderDetail {
+    width: 328px;
+    border-radius: 8px;
+    background: #fff;
+    min-height: 100px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    &--productWrapper {
+      position: relative;
+      display: flex;
+      padding: 8px 0 0 16px;
+      animation: fadeInRight 0.5s forwards;
+
+      &:first-child {
+        padding: 16px 0 0 16px;
+        .Cart__orderDetail--productWrapper-btnClose {
+          top: 16px !important;
+        }
+      }
+      hr {
+        width: 90%;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        margin: 0 auto;
+        left: 16px;
+      }
+
+      &-img img {
+        width: 40px;
+        height: 40px;
+        margin-right: 8px;
+      }
+
+      &-name {
+        padding: 0 36px 0 0;
+      }
+      &-priceWrapper {
+        display: flex;
+        align-items: center;
+      }
+      &-amount {
+        color: #1a94ff;
+        font-weight: 700;
+        margin-right: 4px;
+      }
+      &-discount {
+        font-size: 10px;
+        color: #808089;
+        text-decoration: line-through;
+        margin-top: 2px;
+      }
+      &-btnClose {
+        width: 24px;
+        height: 24px;
+        background: #ebebf0;
+        border-radius: 50%;
+        text-align: center;
+        position: absolute;
+        right: 16px;
+        top: 6px;
+        cursor: pointer;
+      }
+
+      &-controller {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #dddde3;
+        border-radius: 4px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin: 16px 0;
+        svg path {
+          fill: #dddde3;
+        }
+        &:active {
+          border: 1px solid #1887e8;
+          svg path {
+            fill: #1887e8;
+          }
+        }
+      }
+      &-increase {
+      }
+      &-value {
+        margin: 16px 5px !important;
+        input {
+          width: 75%;
+          border: none;
+          text-align: center;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      &-decrease {
+      }
+    }
+  }
+  //
+  &__feeWrapper {
+    padding: 0 16px;
+    &--fee:first-child {
+      padding-top: 4px;
+    }
+    &--fee {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 16px;
+    }
+    &--feeLabel img {
+      margin-left: 5.33px;
+      margin-bottom: 3px;
+    }
+    &--feeValue {
+      color: #28282b;
+      font-weight: 700;
+    }
+  }
+
+  &__paymentTotal {
+    background: #fff;
+    padding: 0 16px;
+    position: sticky;
+    bottom: 0;
+    border-top: 1px solid #ebebf0;
+    .btn-payment {
+      background: $text-orange;
+      color: #fff;
+      font-size: 16px;
+      font-weight: normal;
+      border-radius: 20px;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+    .Cart__feeWrapper {
+      &--fee {
+        padding: 8px 0;
+      }
+    }
+    hr {
+      margin: 0 0 8px 0 !important;
+    }
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

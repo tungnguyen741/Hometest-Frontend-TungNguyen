@@ -1,0 +1,73 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+ul.slider-dot-custom {
+  padding: 0 !important;
+  li {
+    width: 3px !important;
+    padding: 0;
+  }
+  li.slick-active > div {
+    cursor: pointer;
+    width: 8px;
+    height: 8px;
+    margin: 1px 2px;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 1) !important;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    opacity: 1;
+  }
+}
+
+.SuperSale {
+  .slick-list {
+    margin: 0 -5px;
+  }
+  .slick-slide > div {
+    padding: 0 5px;
+  }
+  .slick-dots li {
+    bottom: -10px;
+  }
+  .slick-dots {
+    li {
+      width: 16px !important;
+      height: 2px !important;
+      border-radius: 4px !important;
+      background: rgba(0, 0, 0, 0.1) !important;
+      & > div {
+        width: 16px !important;
+        height: 2px !important;
+        border-radius: 4px !important;
+        background: rgba(0, 0, 0, 0.1) !important;
+        margin: 0 !important;
+      }
+    }
+    li.slick-active {
+      & > div {
+        width: 24px !important;
+        height: 2px !important;
+        background: #fc820a !important;
+      }
+      width: 24px !important;
+      height: 2px !important;
+
+      background: #fc820a !important;
+    }
+  }
+  ul.slider-dot-custom {
+    padding: 0;
+  }
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

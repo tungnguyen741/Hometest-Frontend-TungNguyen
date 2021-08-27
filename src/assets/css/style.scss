@@ -1,0 +1,189 @@
+@import "variables";
+
+@mixin maxWidth {
+  max-width: 360px;
+  margin: auto;
+  padding: 0;
+}
+
+@mixin rwd($screen) {
+  @media (min-width: $screen+"px") {
+    @content;
+  }
+}
+
+body {
+  font-size: 14px;
+  font-family: "Inter", "Roboto", "Arial";
+  background: #e5e5e5;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.nopadding {
+  padding-top: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+/* CSS for default Layout */
+.default-layout {
+  @include maxWidth;
+  background: #eeeeee;
+
+  header {
+    .status-bar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      background: #c7e9f9;
+
+      &__icon {
+        max-width: 16px;
+        height: 12px;
+        margin-right: 10px;
+      }
+      &__icon:first-child {
+        svg {
+          height: 10.67px !important;
+        }
+      }
+      &__icon:nth-child(2) {
+        margin-right: 14px;
+      }
+      &__icon:nth-child(3) {
+        margin-right: 9px;
+      }
+      &__clock {
+        color: #27272a;
+        margin: 3px 8px 4px 0;
+      }
+    }
+    .nav-bar {
+      background: #c7e9f9;
+      // padding: 28px;
+      max-height: 56px;
+      height: 56px;
+      &__chart {
+        font-size: 18px;
+        color: #fff;
+        font-weight: 700;
+        padding: 16px;
+      }
+      &__box {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        padding: 4px 9.33px 4px 10.67px;
+        background: #bddded;
+        border-radius: 20px;
+        max-width: 64px;
+        max-height: 24px;
+
+        &--icon:first-child {
+          margin-right: 10.67px;
+        }
+        &--icon:nth-child(2) {
+          margin-right: 9.33px;
+        }
+      }
+      img {
+        width: 13.33px;
+        max-height: 16px;
+      }
+    }
+  }
+
+  .footer {
+    text-align: center;
+    min-height: 56px;
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    color: #808089;
+    font-size: 10px;
+    .footerInner {
+      @include maxWidth;
+    }
+
+    .footerLine1 {
+      font-family: "Barlow-SemiBold";
+      font-size: 12px;
+    }
+    .bottom-bar {
+      display: flex;
+      cursor: pointer;
+      min-height: 56px;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      height: 56px;
+      a {
+        display: block;
+        width: 50%;
+        color: #808089 !important;
+        height: 100%;
+
+        &:hover {
+          text-decoration: none;
+        }
+        .bottom-bar__icon {
+          height: 100%;
+          border-top: 1px solid #ebebf0;
+          padding: 5px 0 0px 0;
+          div {
+            margin-top: 5px;
+          }
+          svg path {
+            fill: #808089;
+          }
+        }
+      }
+      a.nav-link-active {
+        .bottom-bar__icon {
+          color: $text-orange;
+          font-weight: 700;
+          border-top: 1px solid $text-orange;
+
+          svg path {
+            fill: $text-orange;
+          }
+        }
+      }
+    }
+  }
+}
+
+.loading-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+
+  .loading-wrapper-inner {
+    @include maxWidth;
+    background: rgba(24, 26, 65, 0.6);
+    width: 100%;
+    height: 100%;
+    display: flex; // make us of Flexbox
+    align-items: center; // does vertically center the desired content
+    justify-content: center; // horizontally centers single line items
+    text-align: center;
+  }
+}
+
+@import "lib.scss";
+@import "common.scss";
+@import "sale.scss";
+@import "bookItem.scss";
+@import "cart.scss";
