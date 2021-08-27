@@ -1,6 +1,7 @@
 # Hometest-Frontend-TungNguyen
 Clone and check out with branch **dev**
 ### `git clone https://github.com/tungnguyen741/Hometest-Frontend-TungNguyen`
+### `cd Hometest-Frontend-TungNguyen`
 ### `git checkout dev`
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
