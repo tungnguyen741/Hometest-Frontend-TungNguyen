@@ -4,7 +4,7 @@ import { callApi } from "./middleware/callApi";
 export function getBannersHome(payload, callback) {
   return {
     api: (args) => {
-      return callApi("GET", "/banners_home", args);
+      return callApi("GET", "/v2/widgets/banners_home", args);
     },
     type: typeName.GET_BANNERS_HOME,
     showLoading: true,
