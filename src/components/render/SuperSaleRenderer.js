@@ -1,7 +1,8 @@
 import React from "react";
-import { convertCurrency } from "helpers";
-import SliderSuperSale from "components/common/Slider";
 import PropTypes from "prop-types";
+
+import SliderSuperSale from "components/common/Slider";
+import { convertCurrency } from "helpers";
 
 SuperSaleRenderer.propTypes = {
   bookList: PropTypes.array,

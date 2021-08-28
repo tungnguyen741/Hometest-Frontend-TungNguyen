@@ -1,5 +1,6 @@
 .banners {
   &-slider-wrapper {
+    animation: fadeInRight 0.5s linear;
     cursor: pointer;
     min-height: 120px;
     img {
@@ -8,7 +9,6 @@
   }
   &__saleImg {
     width: 100%;
-    // max-height: 34px;
     padding: 16px 0;
     background: $bg-yellow;
   }

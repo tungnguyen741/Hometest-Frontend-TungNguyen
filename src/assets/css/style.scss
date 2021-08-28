@@ -12,6 +12,18 @@
   }
 }
 
+@mixin fadedIn {
+  @keyframes faded {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
 body {
   font-size: 14px;
   font-family: "Inter", "Roboto", "Arial";
@@ -181,9 +193,25 @@ p {
     text-align: center;
   }
 }
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOutLeft {
+  0% {
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
 
 @import "lib.scss";
-@import "common.scss";
-@import "sale.scss";
 @import "bookItem.scss";
+@import "sale.scss";
 @import "cart.scss";

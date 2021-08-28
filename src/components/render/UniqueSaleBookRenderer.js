@@ -1,6 +1,8 @@
 import React from "react";
-import { convertCurrency } from "helpers";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import PropTypes from "prop-types";
+
+import { convertCurrency } from "helpers";
 
 UniqueSaleBookRenderer.propTypes = {
   bookList: PropTypes.array,
@@ -13,6 +15,21 @@ function UniqueSaleBookRenderer({
   classNames = "bookItemWrapper",
   handleOnGetItem,
 }) {
+  if (bookList.length === 0) {
+    return (
+      <div className="bookItemWrapper-skeleton">
+        <SkeletonTheme>
+          <Skeleton
+            count={10}
+            className="bookItem bookItem-skeleton"
+            delay={2}
+            duration={0.75}
+          />
+        </SkeletonTheme>
+      </div>
+    );
+  }
+
   return (
     <div className={classNames}>
       {bookList?.length > 0 &&

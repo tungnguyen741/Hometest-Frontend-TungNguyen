@@ -1,4 +1,4 @@
-import { call, put, takeLatest } from "redux-saga/effects";
+import { call, delay, put, takeLatest } from "redux-saga/effects";
 import { typeName } from "../redux.config";
 
 function* doAction(action) {
@@ -7,6 +7,12 @@ function* doAction(action) {
       yield put({ type: typeName.SHOW_LOADING });
     } // open loading
 
+    // custom type
+    switch (action.type) {
+      case typeName.GET_BOOK_LIST:
+      case typeName.GET_BANNERS_HOME:
+      default:
+    }
     const data = yield call(action.api, action.payload);
 
     if (action?.showLoading) {

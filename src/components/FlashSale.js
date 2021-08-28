@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
+import PropTypes from "prop-types";
 import classNames from "classnames";
 import { convertCurrency } from "helpers";
-import PropTypes from "prop-types";
 
 FlashSale.propTypes = {
   bookListFlashSale: PropTypes.array,

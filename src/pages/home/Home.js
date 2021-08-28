@@ -67,6 +67,7 @@ const Home = () => {
     showToast("success", `Đã thêm "${bookClicked?.name}" vào giỏ hàng`);
     dispatch(addBookToCart({ bookItem }));
   };
+
   const showToast = (type = "error", message = "") =>
     toast[type](message, {
       position: "top-center",
@@ -77,10 +78,10 @@ const Home = () => {
       draggable: true,
       progress: undefined,
     });
+
   return (
     <div className="homepage">
       <Banners />
-
       <UniqueSaleBook>
         {() => (
           <UniqueSaleBookRenderer
@@ -89,7 +90,6 @@ const Home = () => {
           />
         )}
       </UniqueSaleBook>
-
       <SuperSale>
         {() => (
           <SuperSaleRenderer
@@ -98,7 +98,6 @@ const Home = () => {
           />
         )}
       </SuperSale>
-
       <FlashSale
         handleOnGetItem={handleOnclick}
         bookListFlashSale={bookListFlashSale}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Skeleton from "react-loading-skeleton";
 
 import SliderBanner from "components/common/Slider";
 import { getBannersHome } from "redux/actions/store.actions";
@@ -23,7 +24,12 @@ function Banners() {
 
   return (
     <div className="banners">
-      <SliderBanner data={resBanners} />
+      {resBanners.length === 0 ? (
+        <Skeleton duration={0.75} count={1} height={120} />
+      ) : (
+        <SliderBanner data={resBanners} />
+      )}
+
       <img
         className="banners__saleImg"
         src="assets/img/sale/baner-sale.png"
